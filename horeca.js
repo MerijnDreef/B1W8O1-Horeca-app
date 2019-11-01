@@ -1,13 +1,15 @@
 //frisdrank:&euro;1,20  bier:&euro;2,00  wijn:&euro;3,00
+var total = 0;
 
-while(true){
-        var bestel = prompt("Goededag, welkom bij cafe-lekkernij! Uw keuze bij ons qua dranken zijn: Frisdrank 1,20 euro, bier 2,00 euro en wijn 3,00 euro")
-            var aantal = prompt("hoeveel "+ bestel +" wilt u?")
-            var total = 0;
-            var totalpricefris = 0;
-            var totalpricebier = 0;
-            var totalpricewijn = 0;
-            var totalpricebitterbal = 0;
+while(bestel != "stop"){
+    var bestel = prompt("Goededag, welkom bij cafe-lekkernij! Uw keuze bij ons qua dranken zijn: Frisdrank 1,20 euro, bier 2,00 euro en wijn 3,00 euro")
+    var totalpricefris = 0;
+    var totalpricebier = 0;
+    var totalpricewijn = 0;
+    var totalpricebitterbal = 0;   
+        if(bestel != "stop"){ 
+               var aantal = prompt("hoeveel "+ bestel +" wilt u?")
+         
             if(bestel == "Frisdrank"){
                 kosten = (aantal * 1,20)
                 totalpricefris = totalpricefris + total;
@@ -21,12 +23,10 @@ while(true){
                 kosten = (aantal * 1,20)
                 totalpricewijn = totalpricewijn + total;
             }
-            function hettotaal(){
-                if(bestel == "stop"){
-                    total = totalpricefris + totalpricebier + totalpricewijn + totalpricebitterbal
-                    document.write("Bedankt voor uw bestelling, uw totaal kosten zijn"+"&euro;"+total)
-
-                }
-                return;
-            }
+            else if(bestel == "stop"){
+            
+            }          
+        }
+        total = totalpricefris + totalpricebier + totalpricewijn + totalpricebitterbal
+            document.write("Bedankt voor uw bestelling, uw totaal kosten zijn"+"&euro;"+total)
 }
