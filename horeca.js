@@ -9,19 +9,18 @@ while(bestel != "stop"){
         document.write("Dankuwel voor uw aankoop uw totaal prijs is "+"&euro;"+kosten.toFixed(2))
         break;
     }
-
             if(bestel != "stop"){
                 if(bestel != "snack"){
-                var aantal = prompt("hoeveel "+ bestel +" wilt u?")
-                if(bestel == "fris"|| bestel == "frisdrank"){
-                totalprijs += drinken(bestel,aantal,1.2);
-                }
-                else if(bestel == "bier" || bestel == "pils"){
-                totalprijs += drinken(bestel,aantal,2);
-                }
-                else if(bestel == "wijn"){
-                totalprijs += drinken(bestel,aantal,3);
-                }
+                    var aantal = prompt("hoeveel "+ bestel +" wilt u?")
+                        if(bestel == "fris"){
+                            totalprijs += drinken(bestel,aantal,1.2);
+                        }
+                            else if(bestel == "bier"){
+                                totalprijs += drinken(bestel,aantal,2);
+                            }
+                                else if(bestel == "wijn"){
+                                    totalprijs += drinken(bestel,aantal,3);
+                                }
             }
                 if(bestel == "snack"){
                     var soort = prompt("hoeveel bitterballen wilt u in een schaal?")
@@ -42,9 +41,9 @@ while(bestel != "stop"){
                                     }
                             }
             }
-        else{
-        alert("U heeft een ongeldige invoer gedaan. Uw bestelling kan niet worden toegevoegd.")
-        }
+    else if(bestel != "fris"){
+        alert("U heeft een ongeldige invoer gedaan. Uw bestelling kan niet worden toegevoegd.");
+    }
 }
 function drinken(naam,getal,nummer) {
     var berekening = getal * nummer
